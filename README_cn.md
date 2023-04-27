@@ -90,7 +90,7 @@ git checkout develop && mkdir build && cd build
 开始编译：
 
 ```shell
-cmake .. -DPY_VERSION=3 -DPYTHON_EXECUTABLE=`which python3` -DWITH_ARM=ON -DWITH_GPU=OFF
+cmake .. -DPY_VERSION=3 -DPYTHON_EXECUTABLE=`which python3` -DWITH_ARM=ON -DWITH_GPU=OFF -DON_INFER=ON -DWITH_XBYAK=OFF
 ulimit -n 8192
 make TARGET=ARMV8 -j$(nproc)
 ```
